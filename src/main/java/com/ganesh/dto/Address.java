@@ -7,6 +7,9 @@ public class Address {
     private String state;
     private int pinCode;
     
+    public Address() {
+        
+    }
     public Address(String street, String villageName, String district, String state, int pinCode) {
         this.street = street;
         this.villageName = villageName;
@@ -55,5 +58,8 @@ public class Address {
         this.pinCode = pinCode;
     }
 
-    
+    @Override
+    public String toString() {
+        return "[ " + this.getStreet() + ", " + this.getVillageName() + ", " + this.getDistrict() + ", " + this.getState() + ", " + this.getPinCode() + " ]";
+    }
 }

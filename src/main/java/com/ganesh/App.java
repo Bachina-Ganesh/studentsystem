@@ -14,7 +14,7 @@ public class App
 {
     public static void main( String[] args ) throws IOException
     {
-        String filePath = "./src/main/java/resources/student_data.json";
+        String outputFilePath = "./src/main/java/resources/student_data.json";
 
         Address address1 = new Address("padamati", "panguluru", "bapatla", "ap", 523261);
         Address address2 = new Address("lakshmipuram", "guntur", "guntur", "ap", 52908);
@@ -29,7 +29,27 @@ public class App
 
         List<Student> students = new ArrayList<>(Arrays.asList(student1, student2));
 
-        WriteFile.writeFile(students, filePath);
+        WriteFile.writeFile(students, outputFilePath);
 
+        String inputFilePath = "./src/main/java/resources/student_input.json";
+
+        List<Student> readStudents = ReadFile.readStudentData(inputFilePath);
+        displayDetails(readStudents);
+    }
+
+    public static void displayDetails(List<Student> students) {
+        for(Student student: students) {
+            System.out.println("Student Details");
+            System.out.println("---------------------------");
+            System.out.println(student);
+            System.out.println("Address Details");
+            System.out.println("-----------------------------");
+            System.out.println(student.getAddress());
+            System.out.println("Course Details");
+            System.out.println("-------------------------------");
+            for(Course course: student.getCourses())
+                System.out.println(course);
+            System.out.println("==============================================");
+        }
     }
 }

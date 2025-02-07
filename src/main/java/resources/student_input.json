@@ -1,0 +1,52 @@
+[
+    {
+        "studentId": 100,
+        "studentName": "Ganesh",
+        "address": {
+            "street": "padamati",
+            "villageName": "panguluru",
+            "district": "bapatla",
+            "state": "ap",
+            "pinCode": 523261
+        },
+        "courses": [
+            {
+                "courseId": 1,
+                "courseName": "Java",
+                "courseRating": 4.5,
+                "coursePrice": 1000.0
+            },
+            {
+                "courseId": 3,
+                "courseName": "Sql",
+                "courseRating": 4.9,
+                "coursePrice": 200.0
+            }
+        ]
+    },
+    {
+        "studentId": 101,
+        "studentName": "Suresh",
+        "address": {
+            "street": "lakshmipuram",
+            "villageName": "guntur",
+            "district": "guntur",
+            "state": "ap",
+            "pinCode": 52908
+        },
+        "courses": [
+            {
+                "courseId": 5,
+                "courseName": "AWS",
+                "courseRating": 4.9,
+                "coursePrice": 500.0
+            },
+            {
+                "courseId": 3,
+                "courseName": "Sql",
+                "courseRating": 4.9,
+                "coursePrice": 200.0
+            }
+        ]
+    }
+]

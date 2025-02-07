@@ -7,6 +7,9 @@ public class Course {
     private double courseRating;
     private double coursePrice;
     
+    public Course() {
+        
+    }
     public Course(int courseId, String courseName, double courseRating, double coursePrice) {
         this.courseId = courseId;
         this.courseName = courseName;
@@ -46,5 +49,9 @@ public class Course {
         this.coursePrice = coursePrice;
     }
 
+    @Override
+    public String toString() {
+        return "[ " + this.getCourseId()+", " + this.getCourseName()+ ", " + this.getCourseRating() + ", " + this.getCoursePrice() + " ]";
+    }
     
 }

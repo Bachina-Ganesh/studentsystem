@@ -8,6 +8,9 @@ public class Student {
     private Address address;
     private List<Course> courses;
     
+    public Student() {
+
+    }
     public Student(int studentId, String studentName, Address address, List<Course> courses) {
         this.studentId = studentId;
         this.studentName = studentName;
@@ -47,5 +50,8 @@ public class Student {
         this.courses = courses;
     }
 
-    
+    @Override
+    public String toString() {
+        return "[ " + this.getStudentId() + ", " + this.getStudentName() + " ]";
+    }
 }
